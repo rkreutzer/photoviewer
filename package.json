@@ -41,7 +41,7 @@
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\" --plugin=prettier-plugin-java",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api PhotoViewerPlugin --output-readme docs/API.md --output-json dist/docs.json",
-    "build": "npm run clean",
+    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "test": "echo \"No test specified\"",
